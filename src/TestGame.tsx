@@ -2,7 +2,8 @@
 
 import { useEffect } from "react"
 import * as Phaser from "phaser";
-import { MainScene } from "./plinko/MainScene";
+import { MainScene } from "./platform/MainScene";
+import PlinkoScene from "./plinko/PlinkoScene";
 
 export default function TestGame() {
     useEffect(() => {
@@ -15,10 +16,10 @@ export default function TestGame() {
                 default: 'arcade',
                 arcade: {
                     gravity: {x: 0, y: 300 },
-                    debug: true
+                    debug: false
                 }
             },
-            scene: MainScene,
+            scene: PlinkoScene,
         })
 
         return () => {
